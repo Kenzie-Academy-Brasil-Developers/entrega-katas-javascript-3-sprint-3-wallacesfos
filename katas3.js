@@ -307,7 +307,15 @@ kata18();
 
 function kataBonus1() {
     // implemente o código do kata bonus 1 aqui
+    for(let i = 0; i < 20; i++){
+        let retangulo = document.createElement('div')
+        retangulo.setAttribute('style', 'width: 100px; height: 20px; background-color:gray; margin: 5px;')
+        document.body.appendChild(retangulo);
+    }
+    
+
 }
+kataBonus1()
 
 function kataBonus2() {
     // implemente o código do kata bonus 2 aqui
@@ -315,12 +323,44 @@ function kataBonus2() {
 
 function kataBonus3() {
     // implemente o código do kata bonus 3 aqui
-}
+    for(let i = 0; i < sampleArray.length; i++){
+        let retangulo = document.createElement('div')
+        retangulo.setAttribute('style', 'height: 20px; background-color:gray; margin: 5px;');
+        retangulo.style.width = sampleArray[i] + 'px'
+        document.body.appendChild(retangulo);
+    }
+}kataBonus3();
+
 
 function kataBonus4() {
     // implemente o código do kata bonus 4 aqui
+    for(let i = 0; i < sampleArray.length; i++){
+        let retangulo = document.createElement('div')
+        retangulo.setAttribute('style', 'height: 20px;margin: 5px;');
+        retangulo.style.width = sampleArray[i] + 'px'
+        retangulo.style.backgroundColor = corAleatoria()
+        document.body.appendChild(retangulo);
+    }
+}kataBonus4()
+
+function corAleatoria(){
+     let cor = Math.floor(Math.random() * 3);
+        switch (cor) {
+            case 0:
+                return 'green'
+            case 1:
+                return 'gray'
+            case 2:
+                return 'yellow'
+        }
 }
 
 function kataBonus5() {
     // implemente o código do kata bonus 5 aqui
-}
+    for(let i = 0; i < sampleArray.length; i++){
+        let retangulo = document.createElement('div')
+        retangulo.setAttribute('style', 'height: 20px; background-color:red; margin: 5px;');
+        retangulo.style.width = sampleArray[i] + 'px';
+        document.body.appendChild(retangulo);
+    }
+}kataBonus5()
