@@ -76,29 +76,26 @@ function kata5() {
     // implemente o código do kata 5 aqui
     x = '';
     for(let m = 1; m <= 2; m++){
-        for(let i = 25; i > -25; i--){
-            if(m == 2){
-                if(i == 1){
+        if(m == 1){
+           for(let i = 25; i >= 0; i--){
+                if(i % 2 == 1){
+                    x += i + ', '
+                }
+           }
+        }else{
+            for(let i = 1; i <= 25; i++ ){
+                if(i == 25){
                     if(i % 2 == 1){
-                        x += (i * -1)
+                        x += (i * -1) 
                     }
                 }else{
                     if(i % 2 == 1){
                         x += (i * -1) + ', '
                     }
                 }
-            }else{
-                if(i == 1){
-                    if(i % 2 == 1){
-                        x += i + ', '
-                    }
-                }else{
-                    if(i % 2 == 1){
-                        x += i + ', '
-                    }
-                }
             }
         }
+        
     }
     
     showResults(x)
@@ -159,7 +156,7 @@ function kata9() {
     // implemente o código do kata 9 aqui
     x = '';
     for(let i = 1; i < 100; i++){
-        if(i % 5 == 0){
+        if(i % 5 == 0 && i % 2 == 1){
             if(i == 95){
                 x += i
             }else{
@@ -259,7 +256,7 @@ kata14()
 
 function kata15() {
     // implemente o código do kata 15 aqui
-    x = 0
+    let x = 0
     for(let i = 1; i < 20; i++){
         x+= i
     }
@@ -319,7 +316,15 @@ kataBonus1()
 
 function kataBonus2() {
     // implemente o código do kata bonus 2 aqui
-}
+    let valor = 100
+    for(let i = 0; i < 20; i++){
+        let retangulo = document.createElement('div')
+        retangulo.setAttribute('style', 'height: 20px; background-color:gray; margin: 5px;');
+        valor += 5
+        retangulo.style.width = valor + 'px'
+        document.body.appendChild(retangulo);
+    }
+}kataBonus2();
 
 function kataBonus3() {
     // implemente o código do kata bonus 3 aqui
@@ -359,8 +364,15 @@ function kataBonus5() {
     // implemente o código do kata bonus 5 aqui
     for(let i = 0; i < sampleArray.length; i++){
         let retangulo = document.createElement('div')
-        retangulo.setAttribute('style', 'height: 20px; background-color:red; margin: 5px;');
+        retangulo.setAttribute('style', 'height: 20px; margin: 5px;');
         retangulo.style.width = sampleArray[i] + 'px';
+        retangulo.style.backgroundColor = cor
         document.body.appendChild(retangulo);
+        if(sampleArray[i] % 2 == 0){
+            var cor = 'red'
+
+        }else{
+            var cor = 'gray'
+        }
     }
 }kataBonus5()
